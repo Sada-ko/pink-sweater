@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Pink Sweater</title>
+
+	<link href="css/main.min.css" rel="stylesheet" />
+
+	<!--Favicons-->
+	<link rel="icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ab0635">
+	<meta name="msapplication-TileColor" content="#da532c" />
+	<meta name="theme-color" content="#ffffff" />
+
+	<!-- Montserrat Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+	<!-- Типограф Половнёва -->
+	<script src="https://cdn.jsdelivr.net/npm/typograf@6.7.4/dist/typograf.min.js"></script>
+</head>
+
+<body>
+
+	<header class="px-4 fixed-top bg-brand invert">
+		<div class="d-flex flex-column flex-md-row align-items-center container">
+			<div class="logo my-0 mr-auto">
+				<img src="img/svg/logo-white.svg" alt="">
+			</div>
+			<nav class="d-flex flex-row my-2 my-md-0 mr-3">
+				<a href="#">Услуги</a>
+				<a href="#">Кейсы</a>
+				<a href="#">О нас</a>
+				<a href="#">Контакты</a>
+			</nav>
+			<a class="call-request btn btn-invert" href="#" data-toggle="modal" data-target="#requestModal">Оставить заявку</a>
+		</div>
+	</header>
+
+	<!-- Modal -->
+	<div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+	            <div class="modal-content bg-brand invert">
+	                <div class="modal-header">
+	                    <h5 class="modal-title" id="orderConvertionModalTitle">Заявка на&nbsp;сотрудничество</h5>
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">×</span>
+	                    </button>
+	                </div>
+	                <div class="modal-body">
+	                    <form id="formContact" class="needs-validation" novalidate="">
+	                        <fieldset>
+	                            <div class="form-group row">
+	                                <label for="inputMessage" class="col-sm-4 col-form-label">Расскажите, чё вам надо?</label>
+	                                <div class="col-sm-8">
+	                                    <textarea name="text" class="form-control" id="inputMessage" placeholder="Опишите своими словами" required=""></textarea>
+	                                    <div class="invalid-feedback">Опишите свою боль</div>
+	                                </div>
+	                            </div>
+	                            <div class="form-group row">
+	                                <label for="inputContact" class="col-sm-4 col-form-label">Телефон или почта</label>
+	                                <div class="col-sm-8">
+	                                    <input name="contact" type="text" class="form-control" id="inputContact" placeholder="Ответим в течение дня" required="">
+	                                    <div class="invalid-feedback">Мы&nbsp;не&nbsp;сможем с&nbsp;вами связаться!</div>
+	                                </div>
+	                            </div>
+	                        <!-- </fieldset>
+	                        <fieldset> -->
+	                            <div class="form-group row">
+	                                <div class="col-sm-8 ml-md-auto">
+	                                    <button id="sendMail" type="submit" class="btn btn-lg btn-invert">Отправить</button>
+	                                </div>
+	                            </div>
+	                        </fieldset>
+	                    </form>
+	
+	                    <div class="requestModal-success" style="display: none">
+	                        <h3 class="text-success">
+	                            <i class="fas fa-check-circle"></i>
+	                            Отлично!
+	                        </h3>
+	                        <p>Мы&nbsp;получили ваше сообщение, скоро&nbsp;ответим!</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	</div>
+
+	<main role="main">
+		<section class="who">
+			<div class="container wrapper">
+				<div class="row">
+					<div class="invert-h invert right">
+						<h1>Анастасия Фёдорова</h1>
+					</div>
+					<div class="subhead">
+						PR-менеджер&nbsp;<div class="d-inline bull"><i class="fas fa-circle fa-xs mx-3" data-fa-transform="up-6"></i></div>&nbsp;Организатор&nbsp;<div class="d-inline bull"><i class="fas fa-circle fa-xs mx-3" data-fa-transform="up-6"></i></div>&nbsp;Аналитик
+					</div>
+					<div class="pic-wrapper">
+						<div class="pic">
+							<img src="img/sweater-nastya.png" alt="">
+						</div>
+					</div>
+					<div class="brand-logo">
+						<img src="img/svg/logo-black.svg" alt="">
+					</div>
+					<div>
+					</div>
+					<div class="lead-wrapper">
+						<p class="lead typographed">Пиарю, сопровождаю, провожу мероприятия и форумы, анализирую</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="services bg-brand invert">
+			<div class="container">
+				<div class="invert-h invert right">
+					<h2>Услуги</h2>
+				</div>
+				<div class="row typographed mb-5">
+					<a href="#" class="item" data-toggle="modal" data-target="#strategyModal">
+						<div class="icon">
+							<img src="img/svg/rocket.svg" alt="">
+						</div>
+						<div class="name">Разработка стратегии продвижения</div>
+					</a>
+					<a href="#" class="item" data-toggle="modal" data-target="#prModal">
+						<div class="icon">
+							<img src="img/svg/chart.svg" alt="">
+						</div>
+						<div class="name">PR сопровождение</div>
+					</a>
+					<a href="#" class="item" data-toggle="modal" data-target="#publishModal">
+						<div class="icon">
+							<img src="img/svg/desktop.svg" alt="">
+						</div>
+						<div class="name">Публикация в СМИ</div>
+					</a>
+					<a href="#" class="item" data-toggle="modal" data-target="#eventsModal">
+						<div class="icon">
+							<img src="img/svg/ring.svg" alt="">
+						</div>
+						<div class="name">Организация мероприятий</div>
+					</a>
+					<a href="#" class="item" data-toggle="modal" data-target="#consultingModal">
+						<div class="icon">
+							<img src="img/svg/chat.svg" alt="">
+						</div>
+						<div class="name">Консалтинг</div>
+					</a>
+					<a href="#" class="item" data-toggle="modal" data-target="#copywriteModal">
+						<div class="icon">
+							<img src="img/svg/contract.svg" alt="">
+						</div>
+						<div class="name">Копирайтинг</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<div class="modal fade" id="strategyModal" tabindex="-1" role="dialog" aria-labelledby="strategyModalLabel" aria-hidden="true">
+		    <div class="modal-dialog wide-modal" role="document">
+		            <div class="modal-content bg-brand invert typographed">
+		                <div class="modal-header">
+		                    <h3 class="modal-title">Разработка стратегии продвижения бренда/проекта в b2b-сегменте</h3>
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        <span aria-hidden="true">×</span>
+		                    </button>
+		                </div>
+		                <div class="modal-body">
+		                    <div class="leading">Помогаем определить оптимальные каналы коммуникации для достижения ваших задач на разных этапах, понять, как взаимодействовать с разными группами целевой аудитории в публичном поле и наладить непрерывный процесс общения с ней, и отстроиться от конкурентов, сформировав уникальный образ вашей компании.</div>
+		                    <h4>Вы получаете:</h4>
+		                    <ul>
+		                        <li>Рабочий документ с описанием наиболее подходящих инструментов для продвижения вашей компании;</li>
+		                        <li>Глубокую аналитику информационного поля по профильной теме и актуальные информационные поводы;</li>
+		                        <li>Методику отстройки от конкурентов;</li>
+		                        <li>Проработанную базу релевантных СМИ с подборкой тем и возможных способов взаимодействия с топ-15 ключевых медиа;</li>
+		                        <li>Подробную таблицу важных деловых и отраслевых мероприятий в регионе присутствия с нашими рекомендациями;</li>
+		                        <li>Подборку альтернативных каналов коммуникации для вашей отрасли;</li>
+		                        <li>Digital-стратегию;</li>
+		                        <li>Рекомендации по развития сайта и корпоративного блога</li>
+		                    </ul>
+		                    <p>Сроки: от 3 недель</p>
+		
+		                    <form id="formContact" class="needs-validation" novalidate="">
+		                    	<fieldset>
+		                    		<div class="form-group row">
+		                    
+		                    			<div class="col-sm-8">
+		                    				
+		                    				<input name="contact" type="text" class="form-control" id="inputContact" placeholder="Как с вами связаться?" required="">
+		                    				<div class="invalid-feedback">Опишите свою боль</div>
+		                    			</div>
+		                    
+		                    			<div class="col-sm-4">
+		                    				<button id="sendMail" type="submit" class="btn btn-invert">Отправить</button>
+		                    			</div>
+		                    		</div>
+		                    	</fieldset>
+		                    </form>
+		                    
+		                    <div class="requestModal-success" style="display: none">
+		                    	<h3 class="text-success">
+		                    		<i class="fas fa-check-circle"></i>
+		                    		Отлично!
+		                    	</h3>
+		                    	<p>Мы&nbsp;получили ваше сообщение, скоро&nbsp;ответим!</p>
+		                    </div>
+		
+		                </div>
+		            </div>
+		        </div>
+		</div>
+		
+		<div class="modal fade" id="prModal" tabindex="-1" role="dialog" aria-labelledby="prModalLabel" aria-hidden="true">
+		    <div class="modal-dialog wide-modal" role="document">
+		            <div class="modal-content bg-brand invert typographed">
+		                <div class="modal-header">
+		                    <h5 class="modal-title">PR-сопровождение</h5>
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        <span aria-hidden="true">×</span>
+		                    </button>
+		                </div>
+		                <div class="modal-body">
+		                    <div class="leading">Устойчивый положительный имидж компании для ее клиентов и партнеров достигается планомерной постоянной работой с разными каналами коммуникации. Мы ведем компании самого разного уровня, выполняя функции пресс-службы на аутсорсе.</div>
+		                    <h4>Вы получаете:</h4>
+		                    <ul>
+		                        <li>Повышение узнаваемости компании в медийном пространстве и среди разных сегментов целевой аудитории;</li>
+		                        <li>Регулярное взаимодействие со СМИ, блогерами и лидерами мнений;</li>
+		                        <li>Работу с инфоповодами компании, эксклюзивные публикации и спецпроекты на некоммерческой и коммерческой основах;</li>
+		                        <li>Развитие социальных сетей и других каналов коммуникации (корпоративные блоги, сайт, новые медиа);</li>
+		                        <li>Участие спикеров в профильных мероприятиях и ассоциациях;</li>
+		                        <li>Антикризисную коммуникацию;</li>
+		                        <li>Мониторинг инфополя клиента и конкурентов;</li>
+		                        <li>Подробную отчетность;</li>
+		                    </ul>
+		                    <p>Сроки: от 3 месяцев минимум</p>
+		                </div>
+		            </div>
+		        </div>
+		</div>
+		
+		<div class="modal fade" id="publishModal" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel" aria-hidden="true">
+		    <div class="modal-dialog wide-modal" role="document">
+		            <div class="modal-content bg-brand invert typographed">
+		                <div class="modal-header">
+		                    <h5 class="modal-title">Публикация в СМИ</h5>
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        <span aria-hidden="true">×</span>
+		                    </button>
+		                </div>
+		                <div class="modal-body">
+		
+		                    <div class="leading">Сформируем топ приоритетных медиа, составим темы и форматы работы с ними, свяжемся с журналистами и наладим постоянный поток публикаций о компании и ее первых лицах на некоммерческой основе.</div>
+		                    <h4>Вы получаете:</h4>
+		                    <ul>
+		                        <li>Релевантную базу СМИ с топ-10 медиа для каждой группы целевой аудитории;</li>
+		                        <li>Ежемесячное комфортное количество публикаций, оптимальное для достижения целей;</li>
+		                        <li>Развитие и популяризацию ценностей компании/бренда/эксперта в публичном поле;</li>
+		                        <li>Повышение узнаваемости бренда среди партнеров, заказчиков и потребителей, рост лояльности к нему среди разных групп целевой аудитории;</li>
+		                        <li>Повышение узнаваемости спикеров компании в профессиональной среде и среди журналистов, обретение статуса эксперта по своей теме;</li>
+		                    </ul>
+		
+		                </div>
+		            </div>
+		        </div>
+		</div>
+		
+		<div class="modal fade" id="eventsModal" tabindex="-1" role="dialog" aria-labelledby="eventsModalLabel" aria-hidden="true">
+		    <div class="modal-dialog wide-modal" role="document">
+		            <div class="modal-content bg-brand invert typographed">
+		                <div class="modal-header">
+		                    <h5 class="modal-title">Организация мероприятий</h5>
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        <span aria-hidden="true">×</span>
+		                    </button>
+		                </div>
+		                <div class="modal-body">
+		                    
+		                    <div class="leading">Пресс-конференция, пресс- и блог-тур, федеральный форум, отраслевая конференция, клиентская презентация… Вы можете воспользоваться нашей услугой «под ключ» или пригласить наших экспертов стать на время частью вашей команды для получения высокого результата.</div>
+		                    <h4>Вы получаете:</h4>
+		                    <ul>
+		                        <li>Работу со спикерами: подбор экспертов, брифовка, помощь в подготовке презентаций;</li>
+		                        <li>Поиск площадки, кейтеринга, звуковой аппаратуры и других необходимых элементов успешного мероприятия;</li>
+		                        <li>Работу команды на площадке, чтобы все прошло гладко;</li>
+		                        <li>PR-сопровождение и работа со СМИ</li>
+		                    </ul>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		</div>
+		
+		<div class="modal fade" id="consultingModal" tabindex="-1" role="dialog" aria-labelledby="consultingModalLabel" aria-hidden="true">
+		    <div class="modal-dialog wide-modal" role="document">
+		            <div class="modal-content bg-brand invert typographed">
+		                <div class="modal-header">
+		                    <h5 class="modal-title">Консалтинг</h5>
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        <span aria-hidden="true">×</span>
+		                    </button>
+		                </div>
+		                <div class="modal-body">
+		                    
+		                    <div class="leading">Вам не требуется постоянно PR-специалист и вы готовы делать все «руками», просто надо показать, что и как именно. А может, ваша пресс-служба нуждается в аудите кампании и новых свежих идеях?</div>
+		                    <p>Формат полуторочасовой консультации поможет вам найти решение для ваших задач максимально эффективно и в рамках бюджета.</p>
+		                    <p>Консультации проводятся лично Анастасией.</p>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		</div>
+		
+		<div class="modal fade" id="copywriteModal" tabindex="-1" role="dialog" aria-labelledby="copywriteModalLabel" aria-hidden="true">
+		    <div class="modal-dialog wide-modal" role="document">
+		            <div class="modal-content bg-brand invert typographed">
+		                <div class="modal-header">
+		                    <h5 class="modal-title">Копирайтинг</h5>
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        <span aria-hidden="true">×</span>
+		                    </button>
+		                </div>
+		                <div class="modal-body">
+		                    
+		                    <div class="leading">Напишем продающие лэндинги, наполним сайт актуальным контентом под ваши задачи, сделаем интересный корпоративный блог, создадим тексты для корпоративной полиграфии.</div>
+		                    <p>Цены зависят от объема работ и рассчитываются индивидуально по каждому проекту.</p>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		</div>
+
+		<section class="cases">
+			<div class="invert-h invert left">
+				<h2>Кейсы</h2>
+			</div>
+
+			<div class="bg-brand invert">
+				<div class="container">
+					<div class="owl-carousel typographed">
+						
+						<div>
+							<h3>Девелоперская компания</h3>
+							<div class="row">
+								<div class="col-6">
+									<div class="short">
+										<p>Абонентской сопровождение с июля 2018 года по настоящее время. Заказчик — коммуникационное агентство MediaLink международной группы Vivaki.</p>
+									</div>
+									<div class="targets">
+										<h4>Цели и задачи</h4>
+										<ul>
+											<li>Разработать стратегию продвижения объектов компании с помощью разных каналов коммуникации</li>
+											<li>Обеспечить стабильное и регулярное присутствие компании и ее ключевых спикеров в информационном поле в деловых и отраслевых СМИ</li>
+											<li>Собрать базу релевантных СМИ, мероприятий, общественных организаций и выработать методику взаимодействия с этими институциями</li>
+											<li>Создать и развивать социальные сети компании и ее проектов</li>
+											<li>Организовать продвижение ежемесячного образовательного проекта для клиентов и партнеров компании, а также для потенциальных дольщиков</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="results">
+										<h4>Результаты на 2018 год</h4>
+
+										<div class="result">
+											<div class="factoid">
+												<div class="digits">25-35</div>
+												<div class="description">публикаций в месяц</div>
+											</div>
+											<p>о компании и ее проектах («Коммерсант Санкт-Петербург», «РБК», «Новострой», Restate, «Бюллетень недвижимости», KudaGo, «Собака.ру», «Питер.ТВ»)</p>
+										</div>
+										<div class="result">
+											<div class="factoid">
+												<div class="digits">10-25</div>
+												<div class="description">запросов на комментарии</div>
+											</div>
+											<p>ежемесячно от журналистов ведущих СМИ</p>
+										</div>
+										<div class="result">
+											<div class="factoid">
+												<div class="digits">5</div>
+												<div class="description">крупных городских мероприятий для B2B</div>
+											</div>
+										</div>
+										<p>Образовательный проект компании получил статус городского события с высокой узнаваемостью, собирая до 200 заявок на участие ежемесячно</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<h3>Филиал банка из топ-100 банков России</h3>
+							<div class="row">
+								<div class="col-6">
+									<div class="short">
+										<p><strong>Формат работы:</strong> абонентское сопровождение</p>
+										<p><strong>Срок контракта:</strong> июль 2018 – настоящее время</p>
+										<p><strong>Заказчик:</strong> коммуникационное агентство MediaLink международной группы Vivaki</p>
+										
+									</div>
+									<div class="targets">
+										<h4>Цели и задачи</h4>
+										<ul>
+											<li>Обеспечить стабильное и регулярное присутствие регионального офиса компании в информационном поле в деловых и отраслевых СМИ</li>
+											<li>Наладить непрерывную генерацию информационных повоСоздать базу релевантных СМИ и выработать методику взаимодействия с ключевыми медиа</li>
+											<li>Создать базу релевантных СМИ и выработать методику взаимодействия с ключевыми медиа</li>
+											<li>Вывести в публичное поле ключевых спикеров</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="results">
+										<h4>Результаты</h4>
+
+										<div class="result">
+											<div class="factoid">
+												<div class="digits">100+</div>
+												<div class="description">публикаций</div>
+											</div>
+											<p>За 2018 год в отраслевых и деловых СМИ: REGNUM, «Известия», «Коммерсант Санкт-Петербург», «Деловой Петербург», «Ассоциация Российских банков», Banki.ru и др.</p>
+										</div>
+										<div class="result">
+											<div class="factoid">
+												<div class="digits">10</div>
+												<div class="description">авторских материалов</div>
+											</div>
+											<p>в региональных и федеральных изданиях: интервью, колонки и аналитический материал в ведущем отраслевом журнале «Банковское обозрение»</p>
+										</div>
+										<div class="result">
+											<div class="factoid">
+												<div class="digits">+1</div>
+												<div class="description">новый корпоративный клиент, который «пришел на PR»</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="events">
+			<div class="invert-h invert right">
+				<h2>Ивенты</h2>
+			</div>
+			<div class="container">
+				<div class="vitrage invert">
+					<div class="left col-6">
+						<div class="unit forum-vi">
+							<div class="pic h-100">
+								<img src="img/forum.jpg" class="fill-box" alt="" />
+							</div>
+							<div class="description bg-brand typographed">
+								<a href="#">
+									<div class="head">
+										<p>VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+									</div>
+									<p>VI Санкт-Петербургский международный культурный форум, 2017 форум VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+									<p>VI Санкт-Петербургский международный культурный форум, 2017 форум VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+						
+						<div class="unit forum-it">
+							<div class="pic h-100">
+								<img src="img/forum-2.jpg" class="fill-box" alt="" />
+							</div>
+							<div class="description bg-brand typographed">
+								<a href="#">
+									
+								<div class="head">
+									<p>I международный форум «Импортозамещение в IT: потенциалы и возможности взаимодействия в рамках Евразийского пространства», 2015 год</p>
+								</div>
+								<p>VI Санкт-Петербургский международный культурный форум, 2017 форум VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+								<p>VI Санкт-Петербургский международный культурный форум, 2017 форум VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+								</a>
+							</div>
+						</div>
+						
+						<div class="unit festival">
+							<div class="pic h-100">
+								<img src="img/festival.jpg" class="fill-box" alt="">
+							</div>
+							<div class="description bg-brand typographed">
+								<a href="#">
+									
+								<div class="head">
+									<p>Военно-исторические фестивали «Забытый подвиг»</p>
+								</div>
+								<p>VI Санкт-Петербургский международный культурный форум, 2017 форум VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+								<p>VI Санкт-Петербургский международный культурный форум, 2017 форум VI Санкт-Петербургский международный культурный форум, 2017 форум</p>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="about bg-brand invert">
+			<div class="container typographed">
+
+				<div class="invert-h invert left header-first">
+					<h2>О Pink Sweater PR</h2>
+				</div>
+				<div class="invert-h invert left header-second">
+					<h2>и команде</h2>
+				</div>
+				<p>Петербургское PR-агентство Pink Sweater PR основано Анастасией Федоровой – журналистом и PR-специалистом с большим стажем работы. Агентство специализируется на продвижении средних и крупных компаний из разных сегментов экономики: девелопмент, финансовый сектор, промышленность, ритейл, IT и др., а также на консультации представителей малого бизнеса по вопросам развития и презентации себя в информационном поле. Отдельным большим направлением работы стала организация мероприятий: от узкоспециализированных круглых столов «под клиента» до фестивалей международного уровня, частью команды которых нам повезло быть.</p>
+				<p>В нашем портфолио – более десятка успешных кейсов на региональном и федеральном уровне, реализованных с глубоким пониманием проблематики клиента и профессиональным подходом к делу.</p>
+
+				<div class="staff">
+					<div class="unit">
+						<div class="person">
+							<div class="pic">
+							<img src="img/fedorova.jpg" class="fill-box" alt="">
+							</div>
+						</div>
+						<div class="info">
+							<div class="name">Анастасия Фёдорова</div>
+							<div class="subheader">основатель и генеральный директор</div>
+							<div class="contacts">
+								<i class="fas fa-address-book mr-1"></i> +7 (951) 668-30-70 <i class="fas fa-envelope-open ml-4 mr-1"></i> <a href="mailto:fedorova@ps-pr.ru">fedorova@ps-pr.ru</a>
+							</div>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="person">
+							<div class="pic">
+							<img src="img/karateeva.jpg" class="fill-box" alt="">
+							</div>
+						</div>
+						<div class="info">
+							<div class="name">Мария Каратеева</div>
+							<div class="subheader">PR-менеджер</div>
+							<div class="contacts">
+								<i class="fas fa-address-book mr-1"></i> +7 (981) 829-67-23 <i class="fas fa-envelope-open ml-4 mr-1"></i> <a href="mailto:pr@ps-pr.ru">pr@ps-pr.ru</a>
+							</div>
+						</div>
+					</div>
+					<div class="unit">
+						<div class="person">
+							<div class="pic">
+							<img src="img/ilyina.jpg" class="fill-box" alt="">
+							</div>
+						</div>
+						<div class="info">
+							<div class="name">Елизавета Ильина</div>
+							<div class="subheader">специалист</div>
+							<div class="contacts">
+								<i class="fas fa-address-book mr-1"></i> +7 (909) 577-08-73 <i class="fas fa-envelope-open ml-4 mr-1"></i> <a href="mailto:smm@ps-pr.ru">smm@ps-pr.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="partners">
+			<div class="container invert">
+				<div class="owl-carousel">
+					<div class="item"><img src="img/logos/aira.png" alt=""></div>
+					<div class="item"><img src="img/logos/cult.png" alt=""></div>
+					<div class="item"><img src="img/logos/import.png" alt=""></div>
+					<div class="item"><img src="img/logos/media.png" alt=""></div>
+					<div class="item"><img src="img/logos/mego.png" alt=""></div>
+					<div class="item"><img src="img/logos/promt.png" alt=""></div>
+					<div class="item"><img src="img/logos/rocket.png" alt=""></div>
+					<div class="item"><img src="img/logos/salatnitsa.png" alt=""></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="invert py-5">
+		<div class="container">
+			test
+		</div>
+	</footer>
+
+</body>
+
+<script src="js/main.js" type="text/javascript"></script>
+
+</html>

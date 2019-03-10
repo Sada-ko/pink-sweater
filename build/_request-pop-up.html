@@ -1,0 +1,48 @@
+<!-- Modal -->
+<div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+            <div class="modal-content bg-brand invert">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderConvertionModalTitle">Заявка на&nbsp;сотрудничество</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formContact" class="needs-validation" novalidate="">
+                        <fieldset>
+                            <div class="form-group row">
+                                <label for="inputMessage" class="col-sm-4 col-form-label">Расскажите, чё вам надо?</label>
+                                <div class="col-sm-8">
+                                    <textarea name="text" class="form-control" id="inputMessage" placeholder="Опишите своими словами" required=""></textarea>
+                                    <div class="invalid-feedback">Опишите свою боль</div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputContact" class="col-sm-4 col-form-label">Телефон или почта</label>
+                                <div class="col-sm-8">
+                                    <input name="contact" type="text" class="form-control" id="inputContact" placeholder="Ответим в течение дня" required="">
+                                    <div class="invalid-feedback">Мы&nbsp;не&nbsp;сможем с&nbsp;вами связаться!</div>
+                                </div>
+                            </div>
+                        <!-- </fieldset>
+                        <fieldset> -->
+                            <div class="form-group row">
+                                <div class="col-sm-8 ml-md-auto">
+                                    <button id="sendMail" type="submit" class="btn btn-lg btn-invert">Отправить</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <div class="requestModal-success" style="display: none">
+                        <h3 class="text-success">
+                            <i class="fas fa-check-circle"></i>
+                            Отлично!
+                        </h3>
+                        <p>Мы&nbsp;получили ваше сообщение, скоро&nbsp;ответим!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
