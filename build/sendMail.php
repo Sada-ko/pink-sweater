@@ -1,5 +1,5 @@
 <?php
-if((isset($_POST['text'])&&$_POST['text']!="")&&(isset($_POST['contact'])&&$_POST['contact']!="")){
+if((isset($_POST['message'])&&$_POST['message']!="")&&(isset($_POST['contact'])&&$_POST['contact']!="")){
     $to = 'kaoru-san@yandex.ru';
     $subject = 'Обратный звонок';
     $message = '
@@ -9,7 +9,7 @@ if((isset($_POST['text'])&&$_POST['text']!="")&&(isset($_POST['contact'])&&$_POS
                     </head>
                     <body>
                         <p>Почта: '.$_POST['contact'].'</p>
-                        <p>Сообщение: '.$_POST['text'].'</p>
+                        <p>Сообщение: '.$_POST['message'].'</p>
                     </body>
                 </html>';
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
