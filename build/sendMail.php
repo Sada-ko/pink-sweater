@@ -1,6 +1,6 @@
 <?php
 if((isset($_POST['message'])&&$_POST['message']!="")&&(isset($_POST['contact'])&&$_POST['contact']!="")){
-    $to = 'kaoru-san@yandex.ru';
+    $to = '<fedorova@ps-pr.ru>, <pr@ps-pr.ru>';
     $subject = 'С сайта Pink Sweater';
     $message = '
             <html>
